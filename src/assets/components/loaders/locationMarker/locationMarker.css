@@ -1,0 +1,28 @@
+.pulse {
+  width: 70.4px;
+  height: 70.4px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.pulse:before,
+.pulse:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 50% 0 50%;
+  background: #474bff;
+  -webkit-mask: radial-gradient(circle 17.6px at 50% 50%, #0000 94%, #000);
+}
+
+.pulse:after {
+  animation: pulse-ytk0dhhg 1s infinite;
+  transform: perspective(528px) translateZ(0px);
+}
+
+@keyframes pulse-ytk0dhhg {
+  to {
+    transform: perspective(528px) translateZ(264px);
+    opacity: 0;
+  }
+}
